@@ -1,5 +1,5 @@
+# process train and test data and submission
 import os
-import random
 import sys
 import warnings
 import numpy as np
@@ -12,9 +12,8 @@ from keras.utils import Progbar
 warnings.filterwarnings('ignore', category=UserWarning, module='skimage')
 
 # Setting seed for reproducability
-seed = 42
-random.seed = seed
-np.random.seed = seed
+SEED = 42
+np.random.seed(SEED)
 
 # Data Path
 TRAIN_PATH = 'stage1_train/'
@@ -85,11 +84,10 @@ def rle_encoding(x):
     run_lengths = []
     prev = -2
     for b in dots:
-        if (b > prev + 1): run_lengths.extend((b + 1, 0))
+        if b>prev+1: run_lengths.extend((b + 1, 0))
         run_lengths[-1] += 1
         prev = b
     return run_lengths
-
 
 def prob_to_rles(x, cutoff=0.5):
     lab_img = label(x > cutoff)
@@ -106,8 +104,3 @@ def mask_to_rle(preds_test_upsampled):
         rles.extend(rle)
         new_test_ids.extend([id_] * len(rle))
     return new_test_ids, rles
-
-
-if __name__ == '__main__':
-    x, y = read_train_data()
-    x, y = read_test_data()
