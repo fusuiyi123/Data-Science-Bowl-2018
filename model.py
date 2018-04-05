@@ -1,6 +1,6 @@
 # u-net model
 import numpy as np
-from keras.models import Model, load_model
+from keras.models import Model
 from keras.layers import Input
 from keras.layers.core import Dropout, Lambda
 from keras.layers.convolutional import Conv2D, Conv2DTranspose
@@ -8,7 +8,6 @@ from keras.layers.pooling import MaxPooling2D
 from keras.layers.merge import concatenate
 from keras import optimizers
 from skimage.morphology import label
-from keras import backend as K
 import tensorflow as tf
 
 # Metric function

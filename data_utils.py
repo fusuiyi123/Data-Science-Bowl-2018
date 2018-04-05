@@ -11,7 +11,6 @@ from keras.utils import Progbar
 
 warnings.filterwarnings('ignore', category=UserWarning, module='skimage')
 
-# Setting seed for reproducability
 SEED = 42
 np.random.seed(SEED)
 
@@ -24,7 +23,7 @@ train_ids = next(os.walk(TRAIN_PATH))[1]
 test_ids = next(os.walk(TEST_PATH))[1]
 
 
-# Function read train images and mask return as nump array
+# Function read train images and mask return as numpy array
 def read_train_data(IMG_WIDTH=256, IMG_HEIGHT=256, IMG_CHANNELS=3):
     X_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
     Y_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, 1), dtype=np.bool)
