@@ -76,7 +76,6 @@ def read_test_data(IMG_WIDTH=256, IMG_HEIGHT=256, IMG_CHANNELS=3):
     np.save("test_size", sizes_test)
     return X_test, sizes_test
 
-
 # Run-length encoding stolen from https://www.kaggle.com/rakhlin/fast-run-length-encoding-python
 def rle_encoding(x):
     dots = np.where(x.T.flatten() == 1)[0]
@@ -88,13 +87,14 @@ def rle_encoding(x):
         prev = b
     return run_lengths
 
+# Threshold = 0.5
 def prob_to_rles(x, cutoff=0.5):
     lab_img = label(x > cutoff)
     for i in range(1, lab_img.max() + 1):
         yield rle_encoding(lab_img == i)
 
 
-# Iterate over the test IDs and generate run-length encodings for each seperate mask identified by skimage
+# Iterate over the test IDs and generate run-length encodings for each separate mask identified by skimage
 def mask_to_rle(preds_test_upsampled):
     new_test_ids = []
     rles = []

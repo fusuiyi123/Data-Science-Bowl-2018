@@ -11,9 +11,10 @@ from skimage.morphology import label
 import tensorflow as tf
 
 # Metric function
-def iou_metric(y_true_in, y_pred_in, print_table=False):
-    labels = label(y_true_in > 0.5)
-    y_pred = label(y_pred_in > 0.5)
+
+def iou_metric(y_true_in, y_pred_in, cutoff=0.5, print_table=False):
+    labels = label(y_true_in > cutoff)
+    y_pred = label(y_pred_in > cutoff)
 
     true_objects = len(np.unique(labels))
     pred_objects = len(np.unique(y_pred))
@@ -130,8 +131,9 @@ def get_unet(IMG_WIDTH=256,IMG_HEIGHT=256,IMG_CHANNELS=3, OPTIMIZER=optimizers.A
 
     outputs = Conv2D(1, (1, 1), activation='sigmoid') (c9)
     model = Model(inputs=[inputs], outputs=[outputs])
-    model.compile(optimizer=OPTIMIZER,loss='binary_crossentropy', metrics=[my_iou_metric])
+    model.compile(optimizer=OPTIMIZER, loss='binary_crossentropy', metrics=[my_iou_metric])
     return model
+
 
 """
 # Metric function
