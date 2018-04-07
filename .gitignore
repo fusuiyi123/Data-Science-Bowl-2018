@@ -7,3 +7,4 @@ stage1_train
 stage1_test
 .ipynb_checkpoints
 __pycache__
+*.tar.gz
