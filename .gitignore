@@ -10,3 +10,5 @@ __pycache__
 *.tar.gz
 Mask_RCNN
 RCNN.ipynb
+*.zip
+*.json

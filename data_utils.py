@@ -16,7 +16,7 @@ np.random.seed(SEED)
 
 # Data Path
 TRAIN_PATH = 'stage1_train/'
-TEST_PATH = 'stage1_test/'
+TEST_PATH = 'stage2_test_final/'
 
 # Get train and test IDs
 train_ids = next(os.walk(TRAIN_PATH))[1]
@@ -67,10 +67,12 @@ def read_test_data(IMG_WIDTH=256, IMG_HEIGHT=256, IMG_CHANNELS=3):
     b = Progbar(len(test_ids))
     for n, id_ in enumerate(test_ids):
         path = TEST_PATH + id_
-        img = imread(path + '/images/' + id_ + '.png')[:, :, :IMG_CHANNELS]
+        img = imread(path + '/images/' + id_ + '.png')
+        if len(img.shape) >= 3:
+            img = img[:, :, :3]
         sizes_test.append([img.shape[0], img.shape[1]])
-        img = resize(img, (IMG_HEIGHT, IMG_WIDTH), mode='constant', preserve_range=True)
-        X_test[n] = img
+        img = resize(img, (256, 256), mode='constant', preserve_range=True)
+        X_test[n] = img if len(img.shape) >= 3 else img[:, :, np.newaxis]
         b.update(n)
     np.save("test_img", X_test)
     np.save("test_size", sizes_test)
