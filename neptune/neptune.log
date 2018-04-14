@@ -1,0 +1,29 @@
+2018-04-14 11:16:09,325 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): auth.neptune.ml
+2018-04-14 11:16:09,661 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET / HTTP/1.1" 200 None
+2018-04-14 11:16:09,666 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): auth.neptune.ml
+2018-04-14 11:16:09,870 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET /auth/realms/neptune HTTP/1.1" 200 None
+2018-04-14 11:16:09,883 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): auth.neptune.ml
+2018-04-14 11:16:10,092 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET / HTTP/1.1" 200 None
+2018-04-14 11:16:10,095 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): auth.neptune.ml
+2018-04-14 11:16:10,299 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET /auth/realms/neptune HTTP/1.1" 200 None
+2018-04-14 11:16:10,888 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): auth.neptune.ml
+2018-04-14 11:16:11,143 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "POST /auth/realms/neptune/protocol/openid-connect/token HTTP/1.1" 200 None
+2018-04-14 11:16:11,161 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): app.neptune.ml
+2018-04-14 11:16:11,550 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "PUT /userInfo HTTP/1.1" 200 None
+2018-04-14 11:16:11,582 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): heapanalytics.com
+2018-04-14 11:16:11,853 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "POST /api/track HTTP/1.1" 200 2
+2018-04-14 11:16:11,858 root     DEBUG    tracking.py:67 - report_tracking_metrics() Track sent ({'app_id': '3102000718', 'identity': 'fusuiyi123@gmail.com', 'event': 'CLI_Command: login', 'properties': {'exit_code': 0, 'error': None, 'execution_status': 'success', 'execution_time': 99.72100000000006, 'python_version': '3.6.4', 'platform': 'Darwin-17.5.0-x86_64-i386-64bit', 'cli_version': '2.7.8', 'git': 'git version 2.16.2'}})
+2018-04-14 11:17:18,377 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (1): app.neptune.ml
+2018-04-14 11:17:18,862 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET /2.7/default/project?projectKey=DSB HTTP/1.1" 200 None
+2018-04-14 11:17:19,107 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET /2.7/default/data?projectId=0d725ff8-53f0-433a-b7d3-6b754500e635&pathParam=Mask_RCNN HTTP/1.1" 404 None
+2018-04-14 11:17:19,108 deepsense.neptune.common.api.utils INFO     utils.py:99 - retry_loop() status: 404, response_message: File /data/app/f2a0b033-62be-453f-816f-32b7715500b3/DSB/uploads/Mask_RCNN not found.
+2018-04-14 11:17:20,004 requests.packages.urllib3.connectionpool DEBUG    connectionpool.py:401 - _make_request() "GET /2.7/default/data/verifyUpload?projectId=0d725ff8-53f0-433a-b7d3-6b754500e635&path=Mask_RCNN%2F.git%2Fobjects%2Fpack%2Fpack-c2a8d8aae51e0970ab8d14e8fcfb638aa4072c95.pack HTTP/1.1" 200 None
+2018-04-14 11:17:33,829 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (2): app.neptune.ml
+2018-04-14 11:17:47,830 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (3): app.neptune.ml
+2018-04-14 11:18:02,287 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (4): app.neptune.ml
+2018-04-14 11:18:18,136 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (5): app.neptune.ml
+2018-04-14 11:18:45,507 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (6): app.neptune.ml
+2018-04-14 11:19:08,329 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (7): app.neptune.ml
+2018-04-14 11:20:20,446 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (8): app.neptune.ml
+2018-04-14 11:22:07,245 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (9): app.neptune.ml
+2018-04-14 11:24:24,133 requests.packages.urllib3.connectionpool INFO     connectionpool.py:805 - _new_conn() Starting new HTTPS connection (10): app.neptune.ml
