@@ -16,7 +16,8 @@ np.random.seed(SEED)
 
 # Data Path
 TRAIN_PATH = 'stage1_train/'
-TEST_PATH = 'stage2_test_final/'
+# TEST_PATH = 'stage2_test_final/'
+TEST_PATH = 'stage1_test/'
 
 # Get train and test IDs
 train_ids = next(os.walk(TRAIN_PATH))[1]

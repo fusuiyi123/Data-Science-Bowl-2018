@@ -2,13 +2,12 @@
 *.idea
 *.npy
 *.h5
-unet.pdf
-stage1_train
-stage1_test
+*.pdf
+*.ppt
+sub
 .ipynb_checkpoints
 __pycache__
-Mask_RCNN
 models
-RCNN.ipynb
+Report
 *.zip
 *.json
