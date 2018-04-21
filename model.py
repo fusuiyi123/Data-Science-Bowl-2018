@@ -1,4 +1,5 @@
-# u-net model
+
+# u-net model adapted from https://www.kaggle.com/keegil/keras-u-net-starter-lb-0-27
 import numpy as np
 from keras.models import Model
 from keras.layers import Input

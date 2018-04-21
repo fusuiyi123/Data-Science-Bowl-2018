@@ -1,9 +1,9 @@
-# process train and test data and submission
+
+# process train and test data and submission, adapted from https://www.kaggle.com/keegil/keras-u-net-starter-lb-0-27
 import os
 import sys
 import warnings
 import numpy as np
-from itertools import chain
 from skimage.io import imread, imshow, imread_collection, concatenate_images
 from skimage.transform import resize
 from skimage.morphology import label
@@ -16,15 +16,15 @@ np.random.seed(SEED)
 
 # Data Path
 TRAIN_PATH = 'stage1_train/'
-# TEST_PATH = 'stage2_test_final/'
 TEST_PATH = 'stage1_test/'
+# TEST_PATH = 'stage2_test_final/'
 
 # Get train and test IDs
 train_ids = next(os.walk(TRAIN_PATH))[1]
 test_ids = next(os.walk(TEST_PATH))[1]
 
 
-# Function read train images and mask return as numpy array
+# Function read train images and mask and resize, return numpy array
 def read_train_data(IMG_WIDTH=256, IMG_HEIGHT=256, IMG_CHANNELS=3):
     X_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
     Y_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, 1), dtype=np.bool)
