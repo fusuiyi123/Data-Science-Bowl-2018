@@ -15,4 +15,6 @@ main_kfold.ipynb: ensembled with 4 cross-validation
 
 main_aug.ipynb: train with data augmentation
 
+stage2_pred.ipynb: stage2 prediction notebook
+
 Final stage2 score: 0.350, ranking 311/816
