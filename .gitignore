@@ -11,3 +11,5 @@ models
 Report
 *.zip
 *.json
+Timeline.ipynb
+stage2_pred.ipynb
